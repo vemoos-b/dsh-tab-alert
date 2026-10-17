@@ -1,0 +1,54 @@
+{
+  "name": "dsh-tab-alert",
+  "version": "1.0.0",
+  "description": "DSH Web tab alert: flash the browser tab title \"New Message!\" when an agent turn finishes in a background tab; stops instantly when you return.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vemoos-b/dsh-tab-alert.git"
+  },
+  "homepage": "https://github.com/vemoos-b/dsh-tab-alert#readme",
+  "bugs": {
+    "url": "https://github.com/vemoos-b/dsh-tab-alert/issues"
+  },
+  "author": "vemoos-b",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "sessions",
+        "uiSession"
+      ]
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "client-plugin",
+    "web",
+    "tab",
+    "notification",
+    "title"
+  ]
+}

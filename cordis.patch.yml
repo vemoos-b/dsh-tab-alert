@@ -1,0 +1,5 @@
+# dsh-tab-alert: flash the browser tab title "New Message!" when an agent turn
+# finishes, until the user returns to the tab.
+- insert:
+    - id: dsh-tab-alert
+      name: dsh-tab-alert
